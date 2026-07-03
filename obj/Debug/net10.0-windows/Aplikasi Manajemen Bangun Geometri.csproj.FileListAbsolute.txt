@@ -1,0 +1,30 @@
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.csproj.AssemblyReference.cache
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi_Manajemen_Bangun_Geometri.Form1.resources
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.csproj.GenerateResource.cache
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.AssemblyInfoInputs.cache
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.AssemblyInfo.cs
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.csproj.CoreCompileInputs.cache
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.exe
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.deps.json
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.runtimeconfig.json
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.pdb
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\Google.Protobuf.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\K4os.Compression.LZ4.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\K4os.Hash.xxHash.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\MySql.Data.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\BouncyCastle.Crypto.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\ZstdSharp.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\bin\Debug\net10.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi.1FF069F9.Up2Date
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\refint\Aplikasi Manajemen Bangun Geometri.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.pdb
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.genruntimeconfig.cache
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\ref\Aplikasi Manajemen Bangun Geometri.dll

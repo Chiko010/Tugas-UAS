@@ -1,0 +1,10 @@
+﻿namespace Aplikasi_Manajemen_Bangun_Geometri
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+    }
+}

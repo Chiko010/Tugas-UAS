@@ -1,0 +1,380 @@
+﻿namespace Aplikasi_Manajemen_Bangun_Geometri
+{
+    partial class Form1
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        private void InitializeComponent()
+        {
+            groupBoxInput = new GroupBox();
+            lblNama = new Label();
+            txtNama = new TextBox();
+            lblTipe = new Label();
+            cmbTipe = new ComboBox();
+            lblDimensi1 = new Label();
+            txtDimensi1 = new TextBox();
+            lblDimensi2 = new Label();
+            txtDimensi2 = new TextBox();
+            lblLuas = new Label();
+            lblLuasValue = new Label();
+            lblKeliling = new Label();
+            lblKelilingValue = new Label();
+            btnTambah = new Button();
+            btnUpdate = new Button();
+            btnHapus = new Button();
+            btnBersih = new Button();
+            groupBoxFilter = new GroupBox();
+            lblCari = new Label();
+            txtCari = new TextBox();
+            lblFilterTipe = new Label();
+            cmbFilterTipe = new ComboBox();
+            btnReset = new Button();
+            dgvData = new DataGridView();
+            lblStatus = new Label();
+            groupBoxInput.SuspendLayout();
+            groupBoxFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
+            SuspendLayout();
+            // 
+            // groupBoxInput
+            // 
+            groupBoxInput.Controls.Add(lblNama);
+            groupBoxInput.Controls.Add(txtNama);
+            groupBoxInput.Controls.Add(lblTipe);
+            groupBoxInput.Controls.Add(cmbTipe);
+            groupBoxInput.Controls.Add(lblDimensi1);
+            groupBoxInput.Controls.Add(txtDimensi1);
+            groupBoxInput.Controls.Add(lblDimensi2);
+            groupBoxInput.Controls.Add(txtDimensi2);
+            groupBoxInput.Controls.Add(lblLuas);
+            groupBoxInput.Controls.Add(lblLuasValue);
+            groupBoxInput.Controls.Add(lblKeliling);
+            groupBoxInput.Controls.Add(lblKelilingValue);
+            groupBoxInput.Controls.Add(btnTambah);
+            groupBoxInput.Controls.Add(btnUpdate);
+            groupBoxInput.Controls.Add(btnHapus);
+            groupBoxInput.Controls.Add(btnBersih);
+            groupBoxInput.Location = new Point(15, 18);
+            groupBoxInput.Margin = new Padding(4, 5, 4, 5);
+            groupBoxInput.Name = "groupBoxInput";
+            groupBoxInput.Padding = new Padding(4, 5, 4, 5);
+            groupBoxInput.Size = new Size(1106, 253);
+            groupBoxInput.TabIndex = 0;
+            groupBoxInput.TabStop = false;
+            groupBoxInput.Text = "Input Data Bangun Geometri";
+            // 
+            // lblNama
+            // 
+            lblNama.AutoSize = true;
+            lblNama.Location = new Point(19, 43);
+            lblNama.Margin = new Padding(4, 0, 4, 0);
+            lblNama.Name = "lblNama";
+            lblNama.Size = new Size(129, 23);
+            lblNama.TabIndex = 0;
+            lblNama.Text = "Nama Bangun :";
+            // 
+            // txtNama
+            // 
+            txtNama.Location = new Point(154, 38);
+            txtNama.Margin = new Padding(4, 5, 4, 5);
+            txtNama.Name = "txtNama";
+            txtNama.Size = new Size(256, 30);
+            txtNama.TabIndex = 1;
+            // 
+            // lblTipe
+            // 
+            lblTipe.AutoSize = true;
+            lblTipe.Location = new Point(450, 43);
+            lblTipe.Margin = new Padding(4, 0, 4, 0);
+            lblTipe.Name = "lblTipe";
+            lblTipe.Size = new Size(115, 23);
+            lblTipe.TabIndex = 2;
+            lblTipe.Text = "Tipe Bangun :";
+            // 
+            // cmbTipe
+            // 
+            cmbTipe.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTipe.Items.AddRange(new object[] { "Persegi", "Persegi Panjang", "Lingkaran", "Segitiga" });
+            cmbTipe.Location = new Point(579, 38);
+            cmbTipe.Margin = new Padding(4, 5, 4, 5);
+            cmbTipe.Name = "cmbTipe";
+            cmbTipe.Size = new Size(230, 31);
+            cmbTipe.TabIndex = 3;
+            cmbTipe.SelectedIndexChanged += cmbTipe_SelectedIndexChanged;
+            // 
+            // lblDimensi1
+            // 
+            lblDimensi1.AutoSize = true;
+            lblDimensi1.Location = new Point(19, 100);
+            lblDimensi1.Margin = new Padding(4, 0, 4, 0);
+            lblDimensi1.Name = "lblDimensi1";
+            lblDimensi1.Size = new Size(94, 23);
+            lblDimensi1.TabIndex = 4;
+            lblDimensi1.Text = "Dimensi 1 :";
+            // 
+            // txtDimensi1
+            // 
+            txtDimensi1.Location = new Point(154, 95);
+            txtDimensi1.Margin = new Padding(4, 5, 4, 5);
+            txtDimensi1.Name = "txtDimensi1";
+            txtDimensi1.Size = new Size(256, 30);
+            txtDimensi1.TabIndex = 5;
+            txtDimensi1.TextChanged += InputDimensi_TextChanged;
+            // 
+            // lblDimensi2
+            // 
+            lblDimensi2.AutoSize = true;
+            lblDimensi2.Location = new Point(450, 100);
+            lblDimensi2.Margin = new Padding(4, 0, 4, 0);
+            lblDimensi2.Name = "lblDimensi2";
+            lblDimensi2.Size = new Size(94, 23);
+            lblDimensi2.TabIndex = 6;
+            lblDimensi2.Text = "Dimensi 2 :";
+            // 
+            // txtDimensi2
+            // 
+            txtDimensi2.Location = new Point(579, 95);
+            txtDimensi2.Margin = new Padding(4, 5, 4, 5);
+            txtDimensi2.Name = "txtDimensi2";
+            txtDimensi2.Size = new Size(230, 30);
+            txtDimensi2.TabIndex = 7;
+            txtDimensi2.TextChanged += InputDimensi_TextChanged;
+            // 
+            // lblLuas
+            // 
+            lblLuas.AutoSize = true;
+            lblLuas.Location = new Point(19, 153);
+            lblLuas.Margin = new Padding(4, 0, 4, 0);
+            lblLuas.Name = "lblLuas";
+            lblLuas.Size = new Size(53, 23);
+            lblLuas.TabIndex = 8;
+            lblLuas.Text = "Luas :";
+            // 
+            // lblLuasValue
+            // 
+            lblLuasValue.AutoSize = true;
+            lblLuasValue.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblLuasValue.Location = new Point(154, 153);
+            lblLuasValue.Margin = new Padding(4, 0, 4, 0);
+            lblLuasValue.Name = "lblLuasValue";
+            lblLuasValue.Size = new Size(20, 23);
+            lblLuasValue.TabIndex = 9;
+            lblLuasValue.Text = "0";
+            // 
+            // lblKeliling
+            // 
+            lblKeliling.AutoSize = true;
+            lblKeliling.Location = new Point(450, 153);
+            lblKeliling.Margin = new Padding(4, 0, 4, 0);
+            lblKeliling.Name = "lblKeliling";
+            lblKeliling.Size = new Size(74, 23);
+            lblKeliling.TabIndex = 10;
+            lblKeliling.Text = "Keliling :";
+            // 
+            // lblKelilingValue
+            // 
+            lblKelilingValue.AutoSize = true;
+            lblKelilingValue.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblKelilingValue.Location = new Point(579, 153);
+            lblKelilingValue.Margin = new Padding(4, 0, 4, 0);
+            lblKelilingValue.Name = "lblKelilingValue";
+            lblKelilingValue.Size = new Size(20, 23);
+            lblKelilingValue.TabIndex = 11;
+            lblKelilingValue.Text = "0";
+            // 
+            // btnTambah
+            // 
+            btnTambah.Location = new Point(19, 199);
+            btnTambah.Margin = new Padding(4, 5, 4, 5);
+            btnTambah.Name = "btnTambah";
+            btnTambah.Size = new Size(129, 46);
+            btnTambah.TabIndex = 12;
+            btnTambah.Text = "Tambah";
+            btnTambah.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Location = new Point(161, 199);
+            btnUpdate.Margin = new Padding(4, 5, 4, 5);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(129, 46);
+            btnUpdate.TabIndex = 13;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnHapus
+            // 
+            btnHapus.Location = new Point(302, 199);
+            btnHapus.Margin = new Padding(4, 5, 4, 5);
+            btnHapus.Name = "btnHapus";
+            btnHapus.Size = new Size(129, 46);
+            btnHapus.TabIndex = 14;
+            btnHapus.Text = "Hapus";
+            btnHapus.UseVisualStyleBackColor = true;
+            // 
+            // btnBersih
+            // 
+            btnBersih.Location = new Point(444, 199);
+            btnBersih.Margin = new Padding(4, 5, 4, 5);
+            btnBersih.Name = "btnBersih";
+            btnBersih.Size = new Size(129, 46);
+            btnBersih.TabIndex = 15;
+            btnBersih.Text = "Bersihkan";
+            btnBersih.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxFilter
+            // 
+            groupBoxFilter.Controls.Add(lblCari);
+            groupBoxFilter.Controls.Add(txtCari);
+            groupBoxFilter.Controls.Add(lblFilterTipe);
+            groupBoxFilter.Controls.Add(cmbFilterTipe);
+            groupBoxFilter.Controls.Add(btnReset);
+            groupBoxFilter.Location = new Point(15, 284);
+            groupBoxFilter.Margin = new Padding(4, 5, 4, 5);
+            groupBoxFilter.Name = "groupBoxFilter";
+            groupBoxFilter.Padding = new Padding(4, 5, 4, 5);
+            groupBoxFilter.Size = new Size(1106, 92);
+            groupBoxFilter.TabIndex = 1;
+            groupBoxFilter.TabStop = false;
+            groupBoxFilter.Text = "Pencarian & Filter";
+            // 
+            // lblCari
+            // 
+            lblCari.AutoSize = true;
+            lblCari.Location = new Point(19, 43);
+            lblCari.Margin = new Padding(4, 0, 4, 0);
+            lblCari.Name = "lblCari";
+            lblCari.Size = new Size(100, 23);
+            lblCari.TabIndex = 0;
+            lblCari.Text = "Cari Nama :";
+            // 
+            // txtCari
+            // 
+            txtCari.Location = new Point(129, 38);
+            txtCari.Margin = new Padding(4, 5, 4, 5);
+            txtCari.Name = "txtCari";
+            txtCari.Size = new Size(282, 30);
+            txtCari.TabIndex = 1;
+            // 
+            // lblFilterTipe
+            // 
+            lblFilterTipe.AutoSize = true;
+            lblFilterTipe.Location = new Point(450, 43);
+            lblFilterTipe.Margin = new Padding(4, 0, 4, 0);
+            lblFilterTipe.Name = "lblFilterTipe";
+            lblFilterTipe.Size = new Size(93, 23);
+            lblFilterTipe.TabIndex = 2;
+            lblFilterTipe.Text = "Filter Tipe :";
+            // 
+            // cmbFilterTipe
+            // 
+            cmbFilterTipe.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbFilterTipe.Items.AddRange(new object[] { "Semua", "Persegi", "Persegi Panjang", "Lingkaran", "Segitiga" });
+            cmbFilterTipe.Location = new Point(553, 38);
+            cmbFilterTipe.Margin = new Padding(4, 5, 4, 5);
+            cmbFilterTipe.Name = "cmbFilterTipe";
+            cmbFilterTipe.Size = new Size(230, 31);
+            cmbFilterTipe.TabIndex = 3;
+            // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(823, 35);
+            btnReset.Margin = new Padding(4, 5, 4, 5);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(206, 43);
+            btnReset.TabIndex = 4;
+            btnReset.Text = "Tampilkan Semua";
+            btnReset.UseVisualStyleBackColor = true;
+            // 
+            // dgvData
+            // 
+            dgvData.AllowUserToAddRows = false;
+            dgvData.AllowUserToDeleteRows = false;
+            dgvData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvData.ColumnHeadersHeight = 32;
+            dgvData.Location = new Point(15, 385);
+            dgvData.Margin = new Padding(4, 5, 4, 5);
+            dgvData.MultiSelect = false;
+            dgvData.Name = "dgvData";
+            dgvData.ReadOnly = true;
+            dgvData.RowHeadersWidth = 57;
+            dgvData.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvData.Size = new Size(1106, 414);
+            dgvData.TabIndex = 2;
+            // 
+            // lblStatus
+            // 
+            lblStatus.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblStatus.AutoSize = true;
+            lblStatus.ForeColor = Color.DimGray;
+            lblStatus.Location = new Point(15, 810);
+            lblStatus.Margin = new Padding(4, 0, 4, 0);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(105, 23);
+            lblStatus.TabIndex = 3;
+            lblStatus.Text = "Total Data: 0";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1137, 860);
+            Controls.Add(lblStatus);
+            Controls.Add(dgvData);
+            Controls.Add(groupBoxFilter);
+            Controls.Add(groupBoxInput);
+            Margin = new Padding(4, 5, 4, 5);
+            MinimumSize = new Size(894, 739);
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Aplikasi Manajemen Bangun Geometri";
+            Load += Form1_Load;
+            groupBoxInput.ResumeLayout(false);
+            groupBoxInput.PerformLayout();
+            groupBoxFilter.ResumeLayout(false);
+            groupBoxFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        private System.Windows.Forms.GroupBox groupBoxInput;
+        private System.Windows.Forms.Label lblNama;
+        private System.Windows.Forms.TextBox txtNama;
+        private System.Windows.Forms.Label lblTipe;
+        private System.Windows.Forms.ComboBox cmbTipe;
+        private System.Windows.Forms.Label lblDimensi1;
+        private System.Windows.Forms.TextBox txtDimensi1;
+        private System.Windows.Forms.Label lblDimensi2;
+        private System.Windows.Forms.TextBox txtDimensi2;
+        private System.Windows.Forms.Label lblLuas;
+        private System.Windows.Forms.Label lblLuasValue;
+        private System.Windows.Forms.Label lblKeliling;
+        private System.Windows.Forms.Label lblKelilingValue;
+        private System.Windows.Forms.Button btnTambah;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.Button btnBersih;
+        private System.Windows.Forms.GroupBox groupBoxFilter;
+        private System.Windows.Forms.Label lblCari;
+        private System.Windows.Forms.TextBox txtCari;
+        private System.Windows.Forms.Label lblFilterTipe;
+        private System.Windows.Forms.ComboBox cmbFilterTipe;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.Label lblStatus;
+        #endregion
+    }
+}

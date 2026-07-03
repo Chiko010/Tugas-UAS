@@ -1,0 +1,101 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace Aplikasi_Manajemen_Bangun_Geometri
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        // Event handler stubs referenced by Form1.Designer.cs
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Initialization logic can be added here.
+        }
+
+        private void cmbTipe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Handle type selection changes
+        }
+
+        private void InputDimensi_TextChanged(object sender, EventArgs e)
+        {
+            // Recalculate area/perimeter preview when dimensions change
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            // Add new item
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            // Update selected item
+        }
+
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+            // Delete selected item
+        }
+
+        private void btnBersih_Click(object sender, EventArgs e)
+        {
+            // Clear input fields and reset computed values
+            try
+            {
+                txtNama.Text = string.Empty;
+                txtDimensi1.Text = string.Empty;
+                txtDimensi2.Text = string.Empty;
+
+                if (cmbTipe != null)
+                    cmbTipe.SelectedIndex = -1;
+                if (cmbFilterTipe != null)
+                    cmbFilterTipe.SelectedIndex = -1;
+
+                if (lblLuasValue != null)
+                    lblLuasValue.Text = "0";
+                if (lblKelilingValue != null)
+                    lblKelilingValue.Text = "0";
+
+                if (dgvData != null)
+                    dgvData.ClearSelection();
+
+                lblStatus.Text = "Total Data: 0";
+            }
+            catch
+            {
+                // swallow any UI update errors
+            }
+        }
+
+        private void txtCari_TextChanged(object sender, EventArgs e)
+        {
+            // Handle text search/filter
+        }
+
+        private void cmbFilterTipe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Handle filter by type
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            // Reset filters and show all
+            txtCari.Text = string.Empty;
+            cmbFilterTipe.SelectedIndex = -1;
+        }
+
+        private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Handle row selection
+        }
+
+        private void dgvData_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            // Handle column header sorting
+        }
+    }
+}
