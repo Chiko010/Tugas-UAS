@@ -28,3 +28,4 @@ C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0
 C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.pdb
 C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.genruntimeconfig.cache
 C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\ref\Aplikasi Manajemen Bangun Geometri.dll
+C:\Users\ichik\source\repos\Aplikasi Manajemen Bangun Geometri\obj\Debug\net10.0-windows\Aplikasi Manajemen Bangun Geometri.sourcelink.json

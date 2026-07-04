@@ -42,12 +42,6 @@
             btnReset = new Button();
             dgvData = new DataGridView();
             lblStatus = new Label();
-            // pagination controls
-            btnPrevPage = new Button();
-            btnNextPage = new Button();
-            cmbPageSize = new ComboBox();
-            lblHalaman = new Label();
-
             groupBoxInput.SuspendLayout();
             groupBoxFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
@@ -332,56 +326,11 @@
             lblStatus.TabIndex = 3;
             lblStatus.Text = "Total Data: 0";
             // 
-            // btnPrevPage
-            // 
-            btnPrevPage.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnPrevPage.Location = new Point(760, 806);
-            btnPrevPage.Name = "btnPrevPage";
-            btnPrevPage.Size = new Size(80, 32);
-            btnPrevPage.TabIndex = 16;
-            btnPrevPage.Text = "Prev";
-            btnPrevPage.UseVisualStyleBackColor = true;
-            // 
-            // btnNextPage
-            // 
-            btnNextPage.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnNextPage.Location = new Point(948, 806);
-            btnNextPage.Name = "btnNextPage";
-            btnNextPage.Size = new Size(80, 32);
-            btnNextPage.TabIndex = 17;
-            btnNextPage.Text = "Next";
-            btnNextPage.UseVisualStyleBackColor = true;
-            // 
-            // cmbPageSize
-            // 
-            cmbPageSize.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            cmbPageSize.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbPageSize.Items.AddRange(new object[] { "5", "10", "20", "50" });
-            cmbPageSize.Location = new Point(860, 806);
-            cmbPageSize.Name = "cmbPageSize";
-            cmbPageSize.Size = new Size(80, 31);
-            cmbPageSize.TabIndex = 18;
-            cmbPageSize.SelectedIndex = 1; // default 10
-            // 
-            // lblHalaman
-            // 
-            lblHalaman.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            lblHalaman.AutoSize = true;
-            lblHalaman.Location = new Point(615, 810);
-            lblHalaman.Name = "lblHalaman";
-            lblHalaman.Size = new Size(140, 23);
-            lblHalaman.TabIndex = 19;
-            lblHalaman.Text = "Halaman 1 dari 1";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1137, 860);
-            Controls.Add(lblHalaman);
-            Controls.Add(cmbPageSize);
-            Controls.Add(btnNextPage);
-            Controls.Add(btnPrevPage);
             Controls.Add(lblStatus);
             Controls.Add(dgvData);
             Controls.Add(groupBoxFilter);
@@ -426,11 +375,6 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Label lblStatus;
-        // pagination fields
-        private System.Windows.Forms.Button btnPrevPage;
-        private System.Windows.Forms.Button btnNextPage;
-        private System.Windows.Forms.ComboBox cmbPageSize;
-        private System.Windows.Forms.Label lblHalaman;
         #endregion
     }
 }

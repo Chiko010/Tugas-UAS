@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aplikasi Manajemen Bangun Geometri")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+270c3cb5ef11487b26e58e33d962896f33b88fd6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aplikasi Manajemen Bangun Geometri")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aplikasi Manajemen Bangun Geometri")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

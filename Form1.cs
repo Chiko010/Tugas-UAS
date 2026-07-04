@@ -14,6 +14,12 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
         private string currentSortColumn = "id";
         private string currentSortOrder = "ASC";
 
+        // ==== TAMBAHAN UNTUK PAGINATION ====
+        private int currentPage = 1;
+        private int pageSize = 10;
+        private int totalPages = 1;
+        // ====================================
+
 
         public abstract class BangunGeometri
         {
@@ -28,7 +34,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             public abstract double HitungKeliling();
         }
 
-        
+
         public class Persegi : BangunGeometri
         {
             public override double HitungLuas()
@@ -42,7 +48,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             }
         }
 
-       
+
 
         public class PersegiPanjang : BangunGeometri
         {
@@ -57,7 +63,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             }
         }
 
-        
+
 
         public class Lingkaran : BangunGeometri
         {
@@ -72,7 +78,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             }
         }
 
-       
+
 
         public class Segitiga : BangunGeometri
         {
@@ -91,7 +97,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             }
         }
 
-        
+
 
         public Form1()
         {
@@ -102,6 +108,12 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             btnHapus.Click += btnHapus_Click;
             btnBersih.Click += btnBersih_Click;
             btnReset.Click += btnReset_Click;
+
+            // ==== TAMBAHAN: event tombol pagination ====
+            btnPrevPage.Click += btnPrevPage_Click;
+            btnNextPage.Click += btnNextPage_Click;
+            cmbPageSize.SelectedIndexChanged += cmbPageSize_SelectedIndexChanged;
+            // =============================================
 
             txtCari.TextChanged += txtCari_TextChanged;
 
@@ -118,7 +130,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             cmbFilterTipe.SelectedIndex = 0;
         }
 
-        
+
 
         private void InitializeDatabase()
         {
@@ -187,7 +199,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             }
         }
 
-       
+
 
         private void InsertSampleData(MySqlConnection conn)
         {
@@ -251,16 +263,56 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
                 cmd.ExecuteNonQuery();
             }
         }
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadData();
         }
 
+        // ==== TAMBAHAN: hitung total data sesuai filter aktif ====
+        private int GetTotalData()
+        {
+            string query = "SELECT COUNT(*) FROM bangun_geometri WHERE 1=1";
+
+            if (!string.IsNullOrWhiteSpace(txtCari.Text))
+                query += " AND nama LIKE @cari";
+
+            if (cmbFilterTipe.SelectedIndex > 0)
+                query += " AND tipe=@tipe";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                if (!string.IsNullOrWhiteSpace(txtCari.Text))
+                    cmd.Parameters.AddWithValue("@cari", "%" + txtCari.Text + "%");
+
+                if (cmbFilterTipe.SelectedIndex > 0)
+                    cmd.Parameters.AddWithValue("@tipe", cmbFilterTipe.SelectedItem.ToString());
+
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+        // ===========================================================
+
         private void LoadData()
         {
             try
             {
+                // ==== TAMBAHAN: hitung total data & total halaman ====
+                int totalData = GetTotalData();
+
+                totalPages = (int)Math.Ceiling((double)totalData / pageSize);
+                if (totalPages < 1) totalPages = 1;
+
+                if (currentPage > totalPages) currentPage = totalPages;
+                if (currentPage < 1) currentPage = 1;
+
+                int offset = (currentPage - 1) * pageSize;
+                // =======================================================
+
                 string query = @"SELECT id, nama, tipe,
                                  dimensi1, dimensi2,
                                  luas, keliling
@@ -278,6 +330,10 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
                 }
 
                 query += $" ORDER BY {currentSortColumn} {currentSortOrder}";
+
+                // ==== TAMBAHAN: batasi hasil dengan LIMIT & OFFSET ====
+                query += " LIMIT @pageSize OFFSET @offset";
+                // =========================================================
 
                 using (MySqlConnection conn =
                     new MySqlConnection(connectionString))
@@ -299,6 +355,11 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
                             cmbFilterTipe.SelectedItem.ToString());
                     }
 
+                    // ==== TAMBAHAN: parameter pagination ====
+                    cmd.Parameters.AddWithValue("@pageSize", pageSize);
+                    cmd.Parameters.AddWithValue("@offset", offset);
+                    // ===========================================
+
                     var da = new MySql.Data.MySqlClient.MySqlDataAdapter(cmd);
 
                     DataTable dt = new DataTable();
@@ -318,7 +379,14 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
                     dgvData.Columns["keliling"].HeaderText = "Keliling";
 
                     lblStatus.Text =
-                        "Total Data : " + dt.Rows.Count;
+                        "Total Data : " + totalData;
+
+                    // ==== TAMBAHAN: update info halaman & tombol nav ====
+                    lblHalaman.Text = $"Halaman {currentPage} dari {totalPages}";
+
+                    btnPrevPage.Enabled = currentPage > 1;
+                    btnNextPage.Enabled = currentPage < totalPages;
+                    // =======================================================
                 }
             }
             catch (Exception ex)
@@ -327,7 +395,40 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             }
         }
 
-       
+        // ==== TAMBAHAN: navigasi halaman ====
+        private void btnPrevPage_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                LoadData();
+            }
+        }
+
+        private void btnNextPage_Click(object sender, EventArgs e)
+        {
+            if (currentPage < totalPages)
+            {
+                currentPage++;
+                LoadData();
+            }
+        }
+
+        private void cmbPageSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbPageSize.SelectedItem == null)
+                return;
+
+            if (int.TryParse(cmbPageSize.SelectedItem.ToString(), out int size))
+            {
+                pageSize = size;
+                currentPage = 1;
+                LoadData();
+            }
+        }
+        // ========================================
+
+
 
         private BangunGeometri CreateBangunObject()
         {
@@ -382,7 +483,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             return bangun;
         }
 
-        
+
 
         private void HitungDanTampilkanLuasKeliling()
         {
@@ -403,7 +504,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
                 bangun.HitungKeliling().ToString("F2");
         }
 
-        
+
         private void ClearForm()
         {
             txtNama.Clear();
@@ -420,7 +521,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             txtNama.Focus();
         }
 
-        
+
 
         private void cmbTipe_SelectedIndexChanged(
             object sender,
@@ -468,7 +569,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
         {
             HitungDanTampilkanLuasKeliling();
         }
-        
+
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
@@ -515,6 +616,9 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
                 MessageBox.Show("Data berhasil ditambahkan.");
 
                 ClearForm();
+
+                // ==== TAMBAHAN: pindah ke halaman terakhir agar data baru terlihat ====
+                currentPage = int.MaxValue; // akan otomatis dikoreksi ke totalPages oleh LoadData()
                 LoadData();
             }
             catch (Exception ex)
@@ -523,7 +627,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             }
         }
 
-        
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (selectedId == -1)
@@ -574,7 +678,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
                 MessageBox.Show("Data berhasil diupdate.");
 
                 ClearForm();
-                LoadData();
+                LoadData(); // tetap di halaman yang sama
             }
             catch (Exception ex)
             {
@@ -621,7 +725,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
                 MessageBox.Show("Data berhasil dihapus.");
 
                 ClearForm();
-                LoadData();
+                LoadData(); // LoadData otomatis mengoreksi currentPage jika halaman jadi kosong
             }
             catch (Exception ex)
             {
@@ -635,7 +739,7 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             ClearForm();
         }
 
-        
+
         private void dgvData_CellClick(object sender,
             DataGridViewCellEventArgs e)
         {
@@ -669,21 +773,25 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
 
             HitungDanTampilkanLuasKeliling();
         }
-        
+
 
         private void txtCari_TextChanged(object sender, EventArgs e)
         {
+            // ==== TAMBAHAN: reset ke halaman 1 saat pencarian berubah ====
+            currentPage = 1;
             LoadData();
         }
 
-        
+
 
         private void cmbFilterTipe_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // ==== TAMBAHAN: reset ke halaman 1 saat filter berubah ====
+            currentPage = 1;
             LoadData();
         }
 
-        
+
 
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -695,10 +803,13 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
             currentSortColumn = "id";
             currentSortOrder = "ASC";
 
+            // ==== TAMBAHAN: reset halaman ====
+            currentPage = 1;
+
             LoadData();
         }
 
-        
+
 
         private void dgvData_ColumnHeaderMouseClick(
             object sender,
@@ -722,6 +833,9 @@ namespace Aplikasi_Manajemen_Bangun_Geometri
                 currentSortColumn = columnName;
                 currentSortOrder = "ASC";
             }
+
+            // ==== TAMBAHAN: reset ke halaman 1 saat sorting berubah ====
+            currentPage = 1;
 
             LoadData();
         }
