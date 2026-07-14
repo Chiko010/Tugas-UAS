@@ -7,6 +7,18 @@
       "RelativeMoniker": "D:0:0:{AF4AE5BB-DC00-9760-2718-5786C55753A8}|Aplikasi Manajemen Bangun Geometri.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AF4AE5BB-DC00-9760-2718-5786C55753A8}|Aplikasi Manajemen Bangun Geometri.csproj|c:\\users\\ichik\\source\\repos\\aplikasi manajemen bangun geometri\\infrastructure\\infrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF4AE5BB-DC00-9760-2718-5786C55753A8}|Aplikasi Manajemen Bangun Geometri.csproj|solutionrelative:infrastructure\\infrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4AE5BB-DC00-9760-2718-5786C55753A8}|Aplikasi Manajemen Bangun Geometri.csproj|c:\\users\\ichik\\source\\repos\\aplikasi manajemen bangun geometri\\domain\\domain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF4AE5BB-DC00-9760-2718-5786C55753A8}|Aplikasi Manajemen Bangun Geometri.csproj|solutionrelative:domain\\domain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4AE5BB-DC00-9760-2718-5786C55753A8}|Aplikasi Manajemen Bangun Geometri.csproj|c:\\users\\ichik\\source\\repos\\aplikasi manajemen bangun geometri\\aplication\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF4AE5BB-DC00-9760-2718-5786C55753A8}|Aplikasi Manajemen Bangun Geometri.csproj|solutionrelative:aplication\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AF4AE5BB-DC00-9760-2718-5786C55753A8}|Aplikasi Manajemen Bangun Geometri.csproj|c:\\users\\ichik\\source\\repos\\aplikasi manajemen bangun geometri\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF4AE5BB-DC00-9760-2718-5786C55753A8}|Aplikasi Manajemen Bangun Geometri.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -36,33 +48,74 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\ichik\\source\\repos\\Aplikasi Manajemen Bangun Geometri\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAIwHEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwDYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T12:19:08.224Z",
+              "WhenOpened": "2026-07-10T10:33:54.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Domain.cs",
+              "DocumentMoniker": "C:\\Users\\ichik\\source\\repos\\Aplikasi Manajemen Bangun Geometri\\Domain\\Domain.cs",
+              "RelativeDocumentMoniker": "Domain\\Domain.cs",
+              "ToolTip": "C:\\Users\\ichik\\source\\repos\\Aplikasi Manajemen Bangun Geometri\\Domain\\Domain.cs",
+              "RelativeToolTip": "Domain\\Domain.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAgwAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T13:43:17.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Application.cs",
+              "DocumentMoniker": "C:\\Users\\ichik\\source\\repos\\Aplikasi Manajemen Bangun Geometri\\Aplication\\Application.cs",
+              "RelativeDocumentMoniker": "Aplication\\Application.cs",
+              "ToolTip": "C:\\Users\\ichik\\source\\repos\\Aplikasi Manajemen Bangun Geometri\\Aplication\\Application.cs",
+              "RelativeToolTip": "Aplication\\Application.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T14:06:46.59Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Infrastructure.cs",
+              "DocumentMoniker": "C:\\Users\\ichik\\source\\repos\\Aplikasi Manajemen Bangun Geometri\\Infrastructure\\Infrastructure.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.cs",
+              "ToolTip": "C:\\Users\\ichik\\source\\repos\\Aplikasi Manajemen Bangun Geometri\\Infrastructure\\Infrastructure.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T14:07:38.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\ichik\\source\\repos\\Aplikasi Manajemen Bangun Geometri\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
               "ToolTip": "C:\\Users\\ichik\\source\\repos\\Aplikasi Manajemen Bangun Geometri\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAAJMBAAAAAAAAAAAYwJ8BAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAGQBAAAAAAAAAAAAAHMBAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T12:19:21.496Z"
+              "WhenOpened": "2026-07-11T19:12:15.615Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ichik\\source\\repos\\Aplikasi Manajemen Bangun Geometri\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\ichik\\source\\repos\\Aplikasi Manajemen Bangun Geometri\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T12:16:30.046Z"
+              "WhenOpened": "2026-07-10T10:33:48.861Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
